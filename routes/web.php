@@ -26,3 +26,14 @@ Route::middleware([
         return view('dash.index');
     })->name('dash');
 });
+
+//Route Hooks - Do not delete//
+	Route::view('jugadores', 'livewire.jugadores.index')->middleware('auth');
+	Route::view('inscripciongrp', 'livewire.inscripciongrp.index')->middleware('auth');
+	Route::view('inscripcionidv', 'livewire.inscripcionidv.index')->middleware('auth');
+	Route::view('equipos', 'livewire.equipos.index')->middleware('auth');
+	Route::view('pagos', 'livewire.pagos.index')->middleware('auth');
+	Route::view('horarios', 'livewire.horarios.index')->middleware('auth');
+	Route::view('videojuegos', 'livewire.videojuegos.index')->middleware('auth');
+	Route::view('categoriajuegos', 'livewire.categoriajuegos.index')->middleware('auth');
+	Route::view('aulas', 'livewire.aulas.index')->middleware('auth');

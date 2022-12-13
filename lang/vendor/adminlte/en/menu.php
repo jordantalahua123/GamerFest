@@ -4,6 +4,7 @@ return [
 
     'main_navigation'               => 'MAIN NAVIGATION',
     'blog'                          => 'Blog',
+    'aulas'                         => 'Aulas',
     'pages'                         => 'Pages',
     'account_settings'              => 'ACCOUNT SETTINGS',
     'profile'                       => 'Profile',
