@@ -253,12 +253,12 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'http://127.0.0.1:8000/dash',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
-    'password_email_url' => 'password/email',
+    'password_email_url' => 'password/email'    ,
     'profile_url' => false,
 
     /*
@@ -303,85 +303,55 @@ return [
 
         // Sidebar items:
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Aulas',
+            'url'  => 'http://127.0.0.1:8000/aulas',
+            'icon' => 'fas fa-fw fa-hospital-alt',
+        ],
+        [
+            'text' => 'Horarios',
+            'url'  => 'http://127.0.0.1:8000/horarios',
+            'icon' => 'fas fa-fw fa-calendar',
+        ],
+        [
+            'text' => 'Categorias',
+            'url'  => 'http://127.0.0.1:8000/categorias',
+            'icon' => 'fas fa-fw fa-tags',
+        ],
+        [
+            'text' => 'Videojuegos',
+            'url'  => 'http://127.0.0.1:8000/videojuegos',
+            'icon' => 'fas fa-fw fa-dice',
+        ],
+        [
+            'text' => 'Equipos',
+            'url'  => 'http://127.0.0.1:8000/equipos',
+            'icon' => 'fas fa-fw fa-people-arrows',
+        ],
+        [
+            'text' => 'Jugadores',
+            'url'  => 'http://127.0.0.1:8000/jugadores',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Pagos',
+            'url'  => 'http://127.0.0.1:8000/pagos',
+            'icon' => 'fas fa-fw fa-shopping-cart',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Inscripción grupal',
+            'url'  => 'http://127.0.0.1:8000/inscripciongrp',
+            'icon' => 'fas fa-fw fa-users',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Inscripción individual',
+            'url'  => 'http://127.0.0.1:8000/inscripcionidv',
+            'icon' => 'fas fa-fw fa-user-plus',
         ],
     ],
 

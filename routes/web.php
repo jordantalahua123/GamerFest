@@ -29,8 +29,8 @@ Route::middleware([
 
 //Route Hooks - Do not delete//
 	Route::view('jugadores', 'livewire.jugadores.index')->middleware('auth');
-	Route::view('inscripciongrp', 'livewire.inscripciongrp.index')->middleware('auth');
-	Route::view('inscripcionidv', 'livewire.inscripcionidv.index')->middleware('auth');
+	Route::view('inscripciongrp', 'livewire.inscripciongrps.index')->middleware('auth');
+	Route::view('inscripcionidv', 'livewire.inscripcionidvs.index')->middleware('auth');
 	Route::view('equipos', 'livewire.equipos.index')->middleware('auth');
 	Route::view('pagos', 'livewire.pagos.index')->middleware('auth');
 	Route::view('horarios', 'livewire.horarios.index')->middleware('auth');
