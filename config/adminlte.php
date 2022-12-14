@@ -320,7 +320,7 @@ return [
         ],
         [
             'text' => 'Categorias',
-            'url'  => 'http://127.0.0.1:8000/categorias',
+            'url'  => 'http://127.0.0.1:8000/categoriajuegos',
             'icon' => 'fas fa-fw fa-tags',
         ],
         [
