@@ -13,10 +13,11 @@
             <div class="form-group">
                 <label for="categorias_id"></label>
                 <select wire:model="categorias_id" type="text" class="form-control" id="categorias_id" placeholder="Categorias">@error('categorias_id') <span class="error text-danger">{{ $message }}</span> @enderror
-                <option>Seleccione</option>
-                @foreach($categoriajuegos as $categoria)
-                <option value="{{$categoria->id}}">{{$categoria->tipo}}</option>
-                @endforeach
+                    <option>Seleccione</option>
+                    @foreach($categoriajuegos as $categoria)
+                    <option value="{{$categoria->id}}">{{$categoria->tipo}}</option>
+                    @endforeach
+                </select>
             </div>
             <br>
             <div class="form-group">
@@ -29,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="precio"></label>
-                <input wire:model="precio" type="text" class="form-control" id="precio" placeholder="Precio">@error('precio') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="precio" type="number" class="form-control" id="precio" placeholder="Precio">@error('precio') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="descripcion"></label>
