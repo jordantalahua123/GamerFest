@@ -13,7 +13,11 @@
 					<input type="hidden" wire:model="selected_id">
             <div class="form-group">
                 <label for="categorias_id"></label>
-                <input wire:model="categorias_id" type="text" class="form-control" id="categorias_id" placeholder="Categorias Id">@error('categorias_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select wire:model="categorias_id" type="text" class="form-control" id="categorias_id" placeholder="Categorias">@error('categorias_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <option>Seleccione</option>
+                @foreach($categoriajuegos as $categoria)
+                <option value="{{$categoria->id}}">{{$categoria->tipo}}</option>
+                @endforeach           
             </div>
             <div class="form-group">
                 <label for="nombre"></label>
