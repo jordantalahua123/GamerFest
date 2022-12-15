@@ -22,7 +22,7 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Equipos Id</th>
+								<th>Equipos</th>
 								<th>Nombre</th>
 								<th>Cedula</th>
 								<th>Telefono</th>
