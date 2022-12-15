@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Create New Pago</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Crear Nuevo Pago</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -12,7 +12,7 @@
 				<form>
             <div class="form-group">
                 <label for="titularpago"></label>
-                <input wire:model="titularpago" type="text" class="form-control" id="titularpago" placeholder="Titularpago">@error('titularpago') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="titularpago" type="text" class="form-control" id="titularpago" placeholder="Titular del pago">@error('titularpago') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="comprobante"></label>
@@ -30,8 +30,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Save</button>
+                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Cerrar</button>
+                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Guardar</button>
             </div>
         </div>
     </div>
