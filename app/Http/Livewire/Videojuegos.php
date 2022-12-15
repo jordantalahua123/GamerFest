@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Videojuego;
+use App\Models\Categoriajuego;
 
 class Videojuegos extends Component
 {
@@ -17,15 +18,19 @@ class Videojuegos extends Component
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
+        $categoriajuegos = Categoriajuego::all();
         return view('livewire.videojuegos.view', [
-            'videojuegos' => Videojuego::latest()
+            'videojuegos' => Videojuego::with('Categoriajuego')
+                        ->whereHas('Categoriajuego', fn ($query) =>
+                        $query->where('tipo', 'LIKE', $keyWord)
+                        )
 						->orWhere('categorias_id', 'LIKE', $keyWord)
 						->orWhere('nombre', 'LIKE', $keyWord)
 						->orWhere('compania', 'LIKE', $keyWord)
 						->orWhere('precio', 'LIKE', $keyWord)
 						->orWhere('descripcion', 'LIKE', $keyWord)
 						->paginate(10),
-        ]);
+        ],compact('categoriajuegos'));
     }
 	
     public function cancel()
