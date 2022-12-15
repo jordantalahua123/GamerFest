@@ -16,6 +16,14 @@ class Jugadore extends Model
     protected $fillable = ['equipos_id','nombre','cedula','telefono','correo'];
 	
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function equipo()
+    {
+        return $this->hasOne('App\Models\Equipo', 'id', 'equipos_id');
+    }
+    
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function inscripcionidvs()
