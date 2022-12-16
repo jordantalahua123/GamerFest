@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="updateModalLabel">Update Inscripcionidv</h5>
+                <h5 class="modal-title" id="updateModalLabel">Actualizar inscripcion</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span wire:click.prevent="cancel()" aria-hidden="true">×</span>
                 </button>
@@ -11,17 +11,32 @@
             <div class="modal-body">
                 <form>
 					<input type="hidden" wire:model="selected_id">
-            <div class="form-group">
-                <label for="jugadores_id"></label>
-                <input wire:model="jugadores_id" type="text" class="form-control" id="jugadores_id" placeholder="Jugadores Id">@error('jugadores_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                    <div class="form-group">
+                <label for="jugadores_id">Jugadores</label>
+                <select wire:model="jugadores_id" type="text" class="form-control" id="jugadores_id" placeholder="Jugador">@error('jugadores_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <option>Seleccione:</option>
+                    @foreach($jugadores as $jugador)
+                    <option value="{{$jugador->id}}">{{$jugador->nombre}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
-                <label for="videojuegos_id"></label>
-                <input wire:model="videojuegos_id" type="text" class="form-control" id="videojuegos_id" placeholder="Videojuegos Id">@error('videojuegos_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <label for="videojuegos_id">Videojuego</label>
+                <select wire:model="videojuegos_id" type="text" class="form-control" id="videojuegos_id" placeholder="Videojuego">@error('videojuegos_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <option>Seleccione:</option>
+                    @foreach($videojuegos as $videojuego)
+                    <option value="{{$videojuego->id}}">{{$videojuego->nombre}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
-                <label for="pagos_id"></label>
-                <input wire:model="pagos_id" type="text" class="form-control" id="pagos_id" placeholder="Pagos Id">@error('pagos_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <label for="pagos_id">Pago</label>
+                <select wire:model="pagos_id" type="text" class="form-control" id="pagos_id" placeholder="Pago">@error('pagos_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <option>Seleccione:</option>
+                    @foreach($pagos as $pago)
+                    <option value="{{$pago->id}}">{{$pago->titularpago}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="numerojuegos"></label>
