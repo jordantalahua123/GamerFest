@@ -44,10 +44,10 @@
 
             <div class="card border-secondary mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
                 <div class="card">
-                    <img src="../../../public/img/dota2_social.jpg" alt="Avatar" style="width:100%">
+                    <img src="img/dota2_social.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <h4><b>Personas en linea</b></h4>
-                        <p>Architect & Engineer</p>
+                        <h4><b>Juego mas popular</b></h4>
+                        <p>Lo mas profesional</p>
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@
             <div class="card border-success mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
                 <div class="card-header">Participantes Destacados</div>
                 <div class="card-body text-success">
-                    
+                <img src="img/plantas.jpg" alt="plantas" style="width:100%">
                     Ariel<br>Jordan <br>Diego
                     
                 </div>

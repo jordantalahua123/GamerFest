@@ -4,9 +4,8 @@
     
     <a class="nav-link" data-widget="navbar-search" href="#" role="button">
         
-        <strong>GamerFest, Página Oficial</strong> 
-        <br>
-        Inscribete para tener acceso a todas las caracteristicas  de la página
+        <strong>GamerFest</strong>
+
         <i class="fas fa-search"></i>
         
     </a>
