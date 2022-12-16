@@ -32,9 +32,9 @@
 						<thead class="thead">
 							<tr> 
 								<td>#</td> 
-								<th>Equipos Id</th>
-								<th>Videojuegos Id</th>
-								<th>Pagos Id</th>
+								<th>Equipos</th>
+								<th>Videojuegos</th>
+								<th>Pagos</th>
 								<th>Numerojuegos</th>
 								<th>Observaciones</th>
 								<td>ACTIONS</td>
@@ -44,9 +44,9 @@
 							@foreach($inscripciongrps as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->equipos_id }}</td>
-								<td>{{ $row->videojuegos_id }}</td>
-								<td>{{ $row->pagos_id }}</td>
+								<td>{{ $row->equipo->nombre }}</td>
+								<td>{{ $row->videojuego->nombre }}</td>
+								<td>{{ $row->pago->titularpago }}</td>
 								<td>{{ $row->numerojuegos }}</td>
 								<td>{{ $row->observaciones }}</td>
 								<td width="90">
