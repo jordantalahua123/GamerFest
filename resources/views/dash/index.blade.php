@@ -9,37 +9,38 @@
 @section('content')
 
     <div class="container">
-        <div class="row" style="text-align: center;justify-content: center">
-            <div class="card border-primary mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
-                <div class="card-header">Dinero Recaudado</div>
-                <div class="card-body text-primary">
-                    <h5 class="card-title">100 Inscritos</h5>
-                    <br>
-                    <strong>$120.50</strong>
+        <div class="container">
+            <div class="row" style="text-align: center;justify-content: center">
+                <div class="card border-primary mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
+                    <div class="card-header">Dinero Recaudado</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">100 Inscritos</h5>
+                        <br>
+                        <strong>$120.50</strong>
+                    </div>
                 </div>
-            </div>
-            <div class="card border-secondary mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
-                <div class="card-header">Visitas de la página</div>
-                <div class="card-body text-secondary">
+                <div class="card border-secondary mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
+                    <div class="card-header">Visitas de la página</div>
+                    <div class="card-body text-secondary">
 
-                    <h5 class="card-title">
-                        <div id="current_date">
-                            </p>
-                            <script>
-                                document.getElementById("current_date").innerHTML = Date();
-                            </script>
-                    </h5>
-                    <p class="card-text"><strong>1200</strong></p>
+                        <h5 class="card-title">
+                            <div id="current_date">
+                                </p>
+                                <script>
+                                    document.getElementById("current_date").innerHTML = Date();
+                                </script>
+                        </h5>
+                        <p class="card-text"><strong>1200</strong></p>
+                    </div>
+                </div>
+                <div class="card border-success mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
+                    <div class="card-header">Juegos</div>
+                    <div class="card-body text-success">
+                        <h5 class="card-title">Actualizados</h5>
+                        <p class="card-text"><strong>12</strong></p>
+                    </div>
                 </div>
             </div>
-            <div class="card border-success mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
-                <div class="card-header">Juegos</div>
-                <div class="card-body text-success">
-                    <h5 class="card-title">Actualizados</h5>
-                    <p class="card-text"><strong>12</strong></p>
-                </div>
-            </div>
-        </div>
         <div class="row" style="text-align: center;justify-content: center">
 
             <div class="card border-secondary mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
@@ -58,8 +59,6 @@
                 <div class="card-header">Total de Participantes</div>
                 <div class="card-body text-danger">
                     <h5 class="card-title">122 Participantes</h5>
-                    <br>
-                    <strong>$120.50</strong>
                 </div>
             </div>
             <div class="card border-success mb-3" style="max-width: 18rem; margin: 2px 30px 2px;">
