@@ -1,10 +1,15 @@
 <li class="nav-item">
 
     {{-- Search toggle button --}}
+    
     <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+        
+        <strong>GamerFest, Página Oficial</strong> 
+        <br>
+        Inscribete para tener acceso a todas las caracteristicas  de la página
         <i class="fas fa-search"></i>
+        
     </a>
-
     {{-- Search bar --}}
     <div class="navbar-search-block">
         <form class="form-inline" action="{{ $item['href'] }}" method="{{ $item['method'] }}">
