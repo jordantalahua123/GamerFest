@@ -95,8 +95,8 @@
 
         </div>
     </div>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+    <!-- <style>
+    
 
         body {
             margin: 0;
@@ -213,7 +213,7 @@
                 }
             }
         }
-    </style>
+    </style> -->
 @stop
 
 @section('css')

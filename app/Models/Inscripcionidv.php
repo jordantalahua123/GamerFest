@@ -11,7 +11,7 @@ class Inscripcionidv extends Model
 	
     public $timestamps = true;
 
-    protected $table = 'inscripcionidvs';
+    protected $table = 'inscripcionidv';
 
     protected $fillable = ['jugadores_id','videojuegos_id','pagos_id','numerojuegos','observaciones'];
 	
