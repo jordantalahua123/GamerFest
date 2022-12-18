@@ -56,8 +56,8 @@
                     <div class="col-12">
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
-                            <a href="index.html" class="logo">
-                                <img src="assets/images/logo.png" alt="">
+                            <a href="/" class="logo">
+                            <img src="img/logo-sinfondo2.png" width="80px" height="90px" alt="GamerFest">
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Search End ***** -->
@@ -66,8 +66,8 @@
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
                                 <li><a href="index.html" class="active">Inicio</a></li>
-                                <li><a href="browse.html">¿Quines Somos?</a></li>
-                                <li><a href="details.html">Información</a></li>
+                                <li><a href="http://127.0.0.1:8000/login">Login</a></li>
+                                <li><a href="http://127.0.0.1:8000/register">Registrarse</a></li>
                                 <li><a href="streams.html">Tienda</a></li>
 
                             </ul>

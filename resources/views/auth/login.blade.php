@@ -2,7 +2,8 @@
     <div class="hidden fixed  top-0 right-0 px-6 py-4 sm:block">
         <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a>
     </div>
-
+    <style>
+    </style>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <img src="template/assets/images/logogamerfest.jpg" width="120" height="120">
@@ -15,7 +16,7 @@
                 {{ session('status') }}
             </div>
         @endif
-
+        
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -32,7 +33,7 @@
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Recordarme') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
             </div>
 
