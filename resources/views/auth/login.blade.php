@@ -2,7 +2,8 @@
     <div class="hidden fixed  top-0 right-0 px-6 py-4 sm:block">
         <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Registrar</a>
     </div>
-
+    <style>
+    </style>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
@@ -15,7 +16,7 @@
                 {{ session('status') }}
             </div>
         @endif
-
+        
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -29,12 +30,7 @@
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+            
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
