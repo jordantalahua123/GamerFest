@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'http://127.0.0.1:8000/dash',
+    'dashboard_url' => 'http://127.0.0.1:8000/dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',

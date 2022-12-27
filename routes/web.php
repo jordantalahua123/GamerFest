@@ -27,6 +27,10 @@ Route::middleware([
     })->name('dash');
 });
 
+Route::get('/dashboard', 
+	[App\Http\Controllers\DashboardController::class, 'index']
+	)->name('dashboard');
+
 //Route Hooks - Do not delete//
 	Route::view('jugadores', 'livewire.jugadores.index')->middleware('auth');
 	Route::view('inscripciongrp', 'livewire.inscripciongrps.index')->middleware('auth');
