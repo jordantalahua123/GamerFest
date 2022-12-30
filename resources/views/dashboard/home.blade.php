@@ -118,161 +118,54 @@
             <div class="card flex-fill w-100">
                 <div class="card-header">
 
-                    <h5 class="card-title mb-0">Browser Usage</h5>
+                    <h5 class="card-title mb-0">Juegos individuales más populares</h5>
                 </div>
                 <div class="card-body d-flex">
                     <div class="align-self-center w-100">
-                        <div class="py-3">
-                            <div class="chart chart-xs">
-                                <canvas id="chartjs-dashboard-pie"></canvas>
-                            </div>
+                        <div class="py-3" style="position: relative; height:40vh; width:80vw">
+                            <canvas id="juegosidv"></canvas>
                         </div>
-
-                        <table class="table mb-0">
-                            <tbody>
-                                <tr>
-                                    <td>Chrome</td>
-                                    <td class="text-end">4306</td>
-                                </tr>
-                                <tr>
-                                    <td>Firefox</td>
-                                    <td class="text-end">3801</td>
-                                </tr>
-                                <tr>
-                                    <td>IE</td>
-                                    <td class="text-end">1689</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
+		<div class="col-3 col-md-3 col-xxl-2 d-flex order-3 order-xxl-2">
+		</div>
+        <div class="col-6 col-md-6 col-xxl-6 d-flex order-3 order-xxl-2">
             <div class="card flex-fill w-100">
                 <div class="card-header">
-
-                    <h5 class="card-title mb-0">Real-Time</h5>
+                    <h5 class="card-title mb-0">Juegos duales más populares</h5>
                 </div>
-                <div class="card-body px-4">
-                    <div id="world_map" style="height:350px;"></div>
+				<div class="card-body d-flex">
+                    <div class="align-self-center w-100">
+						<div class="py-3" style="position: relative; height:40vh; width:80vw">
+							<canvas id="juegosduo"></canvas>
+						</div>
+                    </div>
                 </div>
+				
             </div>
         </div>
+		<div class="col-3 col-md-3 col-xxl-2 d-flex order-3 order-xxl-2">
+		</div>
         <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
             <div class="card flex-fill w-100">
                 <div class="card-header">
-
-                    <h5 class="card-title mb-0">Browser Usage</h5>
+                    <h5 class="card-title mb-0">Juegos grupales más populares</h5>
                 </div>
                 <div class="card-body d-flex">
                     <div class="align-self-center w-100">
-                        <div class="py-3">
-                            <div class="chart chart-xs">
-                                <canvas id="chartjs-dashboard-pie2"></canvas>
-                            </div>
+                        <div class="py-3" style="position: relative; height:40vh; width:80vw">
+                            <canvas id="juegosgrp"></canvas>
                         </div>
-
-                        <table class="table mb-0">
-                            <tbody>
-                                <tr>
-                                    <td>Chrome</td>
-                                    <td class="text-end">4306</td>
-                                </tr>
-                                <tr>
-                                    <td>Firefox</td>
-                                    <td class="text-end">3801</td>
-                                </tr>
-                                <tr>
-                                    <td>IE</td>
-                                    <td class="text-end">1689</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
-            <div class="card flex-fill">
-                <div class="card-header">
-
-                    <h5 class="card-title mb-0">Latest Projects</h5>
-                </div>
-                <table class="table table-hover my-0">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th class="d-none d-xl-table-cell">Start Date</th>
-                            <th class="d-none d-xl-table-cell">End Date</th>
-                            <th>Status</th>
-                            <th class="d-none d-md-table-cell">Assignee</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Project Apollo</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                        </tr>
-                        <tr>
-                            <td>Project Fireball</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-danger">Cancelled</span></td>
-                            <td class="d-none d-md-table-cell">William Harris</td>
-                        </tr>
-                        <tr>
-                            <td>Project Hades</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                        </tr>
-                        <tr>
-                            <td>Project Nitro</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-warning">In progress</span></td>
-                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                        </tr>
-                        <tr>
-                            <td>Project Phoenix</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">William Harris</td>
-                        </tr>
-                        <tr>
-                            <td>Project X</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                        </tr>
-                        <tr>
-                            <td>Project Romeo</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Christina Mason</td>
-                        </tr>
-                        <tr>
-                            <td>Project Wombat</td>
-                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                            <td><span class="badge bg-warning">In progress</span></td>
-                            <td class="d-none d-md-table-cell">William Harris</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        
         <div class="col-12 col-lg-4 col-xxl-3 d-flex">
             <div class="card flex-fill w-100">
                 <div class="card-header">
@@ -288,4 +181,110 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('js')
+<script type="text/javascript">
+	window.livewire.on('closeModal', () => {
+		$('#createDataModal').modal('hide');
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+	const juegosidv = JSON.parse(`<?php echo $data; ?>`);
+	const juegosidvChartCanvas = document.getElementById('juegosidv').getContext('2d');
+	const juegosidvChart = new Chart(juegosidvChartCanvas, {
+		type: 'bar',
+		data: {
+			labels: juegosidv.label,
+			datasets: [{
+				data: juegosidv.data,
+				backgroundColor: [
+					'rgba(120, 186, 154)',
+					'rgba(213, 186, 154)',
+					'rgba(213, 186, 89)',
+					'rgba(105, 95, 89)',
+					'rgba(105, 41, 89)',
+					'rgba(252, 211, 89)',
+					'rgba(252, 211, 216)'
+				],
+				borderColor: [
+					'black'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			plugins: {
+				legend: {
+					display: false
+				}
+			}
+		}
+	});
+	/////////////////////////////
+	const juegosgrp = JSON.parse(`<?php echo $data; ?>`);
+	const juegosgrpChartCanvas = document.getElementById('juegosgrp').getContext('2d');
+	const juegosgrpChart = new Chart(juegosgrpChartCanvas, {
+		type: 'bar',
+		data: {
+			labels: juegosgrp.labelg,
+			datasets: [{
+				data: juegosgrp.datag,
+				backgroundColor: [
+					'rgba(120, 186, 154)',
+					'rgba(213, 186, 154)',
+					'rgba(213, 186, 89)',
+					'rgba(105, 95, 89)',
+					'rgba(105, 41, 89)',
+					'rgba(252, 211, 89)',
+					'rgba(252, 211, 216)'
+				],
+				borderColor: [
+					'black'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			plugins: {
+				legend: {
+					display: false
+				}
+			}
+		}
+	});
+	/////////////////////////////
+	const juegosduo = JSON.parse(`<?php echo $data; ?>`);
+	const juegosduoChartCanvas = document.getElementById('juegosduo').getContext('2d');
+	const juegosduoChart = new Chart(juegosduoChartCanvas, {
+		type: 'bar',
+		data: {
+			labels: juegosduo.labeld,
+			datasets: [{
+				data: juegosduo.datad,
+				backgroundColor: [
+					'rgba(120, 186, 154)',
+					'rgba(213, 186, 154)',
+					'rgba(213, 186, 89)',
+					'rgba(105, 95, 89)',
+					'rgba(105, 41, 89)',
+					'rgba(252, 211, 89)',
+					'rgba(252, 211, 216)'
+				],
+				borderColor: [
+					'black'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			plugins: {
+				legend: {
+					display: false
+				}
+			}
+		}
+	});
+</script>
 @stop

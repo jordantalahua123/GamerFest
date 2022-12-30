@@ -32,11 +32,24 @@ class DashboardController extends Controller
      */
     public function index()
     {
+
         $contar = $this->getContar();
+        $data = $this->getVideojuegos();
         
+        $mayorInd = [
+            'id'=>4,
+            'num_ind'=>Inscripcionidv::all()->where('videojuegos_id',3)->count()
+        ];
+        $top_ind=[
+            'nombre'=>(Videojuego::select('nombre')->where('id',$mayorInd['id'])->first()->nombre),
+            'num_ind'=>$mayorInd['num_ind'],
+            
+        ];
+
         return view('dashboard.home',[
             'contar'=>$contar,
-        ]);
+            'top_ind'=>$top_ind,
+        ],$data);
     }
     public function getContar()
     {
@@ -50,15 +63,52 @@ class DashboardController extends Controller
         $name= DB::select('SELECT nombre FROM videojuegos where videojuegos.categorias_id like "1";');
 
         $contar = [
-            'total_videojuegos' => Videojuego::all()->count(), 
+            'total_videojuegos' => Videojuego::all()->count(),
             'total_jugadores' => Jugadore::all()->count(), 
-            'total_aulas' => Aula::all()->count(), 
-            'total_equipos' => Equipo::all()->count(), 
-            'total_inscripcionIndi' => Inscripcionidv::all()->count(), 
-            'total_inscripcionGru' => Inscripciongrp::all()->count(), 
+            'total_aulas' => Aula::all()->count(),
+            'total_equipos' => Equipo::all()->count(),
+            'total_inscripcionIndi' => Inscripcionidv::all()->count(),
+            'total_inscripcionGru' => Inscripciongrp::all()->count(),
             'total_inscripciones' => round($individual + $grupal),
-            'total_pagos' => (float) $pagos[0]->suma,  
+            'total_pagos' => (float) $pagos[0]->suma,
         ];
         return $contar;
+    }
+    public function getVideojuegos(){
+        
+        $videojuegos = Videojuego::ALL();
+    
+        $juegos=DB::select('SELECT nombre FROM videojuegos where videojuegos.categorias_id like "1"');
+        $juegosgrp=DB::select('SELECT nombre FROM videojuegos where videojuegos.categorias_id like "2"');
+        $juegosduo=DB::select('SELECT nombre FROM videojuegos where videojuegos.categorias_id like "3"');
+
+        $id=DB::select('SELECT id FROM videojuegos where videojuegos.categorias_id like "1"');
+        $idgrp=DB::select('SELECT id FROM videojuegos where videojuegos.categorias_id like "2"');
+        $idduo=DB::select('SELECT id FROM videojuegos where videojuegos.categorias_id like "3"');
+        
+        
+        for($i=0; $i < sizeof($juegos);$i++){
+        
+            $data['label'][] = $juegos[$i]->nombre;
+
+            $data['data'][] = Inscripcionidv::all()->where('videojuegos_id', $id[$i]->id)->count(); 
+        }
+
+        
+        for($i=0; $i < sizeof($juegosgrp);$i++){
+            
+            $data['labelg'][] = $juegosgrp[$i]->nombre;
+            $data['datag'][] = Inscripciongrp::all()->where('videojuegos_id',$idgrp[$i]->id)->count();
+        }
+
+        for($i=0; $i < sizeof($juegosduo);$i++){
+            
+            $data['labeld'][] = $juegosduo[$i]->nombre;
+            $data['datad'][] = Inscripciongrp::all()->where('videojuegos_id',$idduo[$i]->id)->count();
+        }
+
+        $data['data'] = json_encode($data);
+        
+        return $data;
     }
 }
