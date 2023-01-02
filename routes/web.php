@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
+Route::get('/aulasApi', 'App\Http\Controllers\AulaController@index');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
