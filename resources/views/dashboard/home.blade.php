@@ -24,12 +24,12 @@
                                         <h5 class="card-title">Inscripciones totales</h5>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="stat text-primary">
-                                            <i class="align-middle" data-feather="truck"></i>
+                                        <div class="text-success">
+                                            <i class="align-middle fas fa-clipboard-list"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <h1 class="mt-1 mb-3">{{ $contar['total_inscripciones'] }}</h1>
+                                <h1 class="mt-1 mb-3">{{ $totales['total_inscripciones'] }}</h1>
                                 <div class="mb-0">
                                     <span class="text-muted">Desde la creación de la página</span>
                                 </div>
@@ -43,12 +43,12 @@
                                     </div>
 
                                     <div class="col-auto">
-                                        <div class="stat text-primary">
-                                            <i class="align-middle" data-feather="users"></i>
+                                        <div class="stat text-success">
+                                            <i class="fas fa-user-edit"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <h1 class="mt-1 mb-3">{{ $contar['total_jugadores'] }}</h1>
+                                <h1 class="mt-1 mb-3">{{ $totales['total_jugadores'] }}</h1>
                                 <div class="mb-0">
                                     <span class="text-muted">Desde la creación de la página</span>
                                 </div>
@@ -63,12 +63,12 @@
                                         <h5 class="card-title">Dinero recaudado</h5>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="stat text-primary">
-                                            <i class="align-middle" data-feather="dollar-sign"></i>
+                                        <div class="stat text-success">
+                                            <i class="align-middle fas fa-money-check"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <h1 class="mt-1 mb-3">{{ $contar['total_pagos'] }}</h1>
+                                <h1 class="mt-1 mb-3">${{ $totales['total_pagos'] }}</h1>
                                 <div class="mb-0">
                                     <span class="text-muted">En base a inscripciones</span>
                                 </div>
@@ -82,12 +82,12 @@
                                     </div>
 
                                     <div class="col-auto">
-                                        <div class="stat text-primary">
-                                            <i class="align-middle" data-feather="shopping-cart"></i>
+                                        <div class="stat text-success">
+                                            <i class="align-middle fas fa-people-carry"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <h1 class="mt-1 mb-3">{{ $contar['total_equipos'] }}</h1>
+                                <h1 class="mt-1 mb-3">{{ $totales['total_equipos'] }}</h1>
                                 <div class="mb-0">
                                     <span class="text-muted">En base a inscripciones</span>
                                 </div>
@@ -116,8 +116,7 @@
     <div class="row">
         <div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
             <div class="card flex-fill w-100">
-                <div class="card-header">
-
+                <div class="card-header text-center">
                     <h5 class="card-title mb-0">Juegos individuales más populares</h5>
                 </div>
                 <div class="card-body d-flex">
@@ -129,25 +128,6 @@
                 </div>
             </div>
         </div>
-		<div class="col-3 col-md-3 col-xxl-2 d-flex order-3 order-xxl-2">
-		</div>
-        <div class="col-6 col-md-6 col-xxl-6 d-flex order-3 order-xxl-2">
-            <div class="card flex-fill w-100">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">Juegos duales más populares</h5>
-                </div>
-				<div class="card-body d-flex">
-                    <div class="align-self-center w-100">
-						<div class="py-3" style="position: relative; height:40vh; width:80vw">
-							<canvas id="juegosduo"></canvas>
-						</div>
-                    </div>
-                </div>
-				
-            </div>
-        </div>
-		<div class="col-3 col-md-3 col-xxl-2 d-flex order-3 order-xxl-2">
-		</div>
         <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
             <div class="card flex-fill w-100">
                 <div class="card-header">
@@ -163,20 +143,49 @@
             </div>
         </div>
     </div>
-
-    <div class="row">
-        
-        <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
             <div class="card flex-fill w-100">
                 <div class="card-header">
-
-                    <h5 class="card-title mb-0">Monthly Sales</h5>
+                    <h5 class="card-title mb-0">Juegos duales más populares</h5>
                 </div>
-                <div class="card-body d-flex w-100">
-                    <div class="align-self-center chart chart-lg">
-                        <canvas id="chartjs-dashboard-bar"></canvas>
+                <div class="card-body d-flex">
+                    <div class="align-self-center w-100">
+                        <div class="py-3" style="position: relative; height:40vh; width:80vw">
+							<canvas id="juegosduo"></canvas>
+						</div>
                     </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Resumen de pagos diarios</h5>
                 </div>
+                <div class="card-body d-flex">
+                    <div class="align-self-center w-100">
+                        <div class="py-3" style="position: relative; height:40vh; width:80vw">
+							<canvas id="pagos"></canvas>
+						</div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Numero de inscripciones diarias</h5>
+                </div>
+                <div class="card-body d-flex">
+                    <div class="align-self-center w-100">
+                        <div class="py-3" style="position: relative; height:40vh; width:80vw">
+							<canvas id="inscripciones"></canvas>
+						</div>
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
@@ -200,10 +209,10 @@
 			datasets: [{
 				data: juegosidv.data,
 				backgroundColor: [
-					'rgba(120, 186, 154)',
+					'rgba(105, 95, 89)',
 					'rgba(213, 186, 154)',
 					'rgba(213, 186, 89)',
-					'rgba(105, 95, 89)',
+					'rgba(120, 186, 154)',
 					'rgba(105, 41, 89)',
 					'rgba(252, 211, 89)',
 					'rgba(252, 211, 216)'
@@ -264,19 +273,63 @@
 			datasets: [{
 				data: juegosduo.datad,
 				backgroundColor: [
-					'rgba(120, 186, 154)',
+					'rgba(252, 211, 216)',
 					'rgba(213, 186, 154)',
 					'rgba(213, 186, 89)',
 					'rgba(105, 95, 89)',
 					'rgba(105, 41, 89)',
 					'rgba(252, 211, 89)',
-					'rgba(252, 211, 216)'
+					'rgba(120, 186, 154)'
 				],
 				borderColor: [
 					'black'
 				],
 				borderWidth: 1
 			}]
+		},
+		options: {
+			plugins: {
+				legend: {
+					display: false
+				}
+			}
+		}
+	});
+    /////////////////////////////
+    const pagos = JSON.parse(`<?php echo $data; ?>`);
+    const pagosChartCanvas = document.getElementById('pagos').getContext('2d');
+	const pagosChart = new Chart(pagosChartCanvas, {
+		type: 'line',
+		data: {
+			labels: pagos.labelf,
+			datasets: [{
+				data: pagos.dataf,
+				backgroundColor: 'rgba(105, 41, 89)',
+				borderColor: 'black',
+				borderWidth: 3
+			}]  
+		},
+		options: {
+			plugins: {
+				legend: {
+					display: false
+				}
+			}
+		}
+	});
+    /////////////////////////////
+    const inscripciones = JSON.parse(`<?php echo $data; ?>`);
+    const inscripcionesChartCanvas = document.getElementById('inscripciones').getContext('2d');
+	const inscripcionesChart = new Chart(inscripcionesChartCanvas, {
+		type: 'line',
+		data: {
+			labels: inscripciones.labeli,
+			datasets: [{
+				data: inscripciones.datai,
+				backgroundColor: 'rgba(252, 211, 112)',
+				borderColor: 'green',
+				borderWidth: 3
+			}]  
 		},
 		options: {
 			plugins: {

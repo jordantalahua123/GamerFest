@@ -33,25 +33,14 @@ class DashboardController extends Controller
     public function index()
     {
 
-        $contar = $this->getContar();
-        $data = $this->getVideojuegos();
-        
-        $mayorInd = [
-            'id'=>4,
-            'num_ind'=>Inscripcionidv::all()->where('videojuegos_id',3)->count()
-        ];
-        $top_ind=[
-            'nombre'=>(Videojuego::select('nombre')->where('id',$mayorInd['id'])->first()->nombre),
-            'num_ind'=>$mayorInd['num_ind'],
-            
-        ];
+        $totales = $this->Totales();
+        $data = $this->FuncionRecogida();
 
         return view('dashboard.home',[
-            'contar'=>$contar,
-            'top_ind'=>$top_ind,
+            'totales'=>$totales,
         ],$data);
     }
-    public function getContar()
+    public function Totales()
     {
         $individual= Inscripcionidv::all()->count();
         $grupal= Inscripciongrp::all()->count();
@@ -74,40 +63,48 @@ class DashboardController extends Controller
         ];
         return $contar;
     }
-    public function getVideojuegos(){
-        
-        $videojuegos = Videojuego::ALL();
+    public function FuncionRecogida(){
     
         $juegos=DB::select('SELECT nombre FROM videojuegos where videojuegos.categorias_id like "1"');
         $juegosgrp=DB::select('SELECT nombre FROM videojuegos where videojuegos.categorias_id like "2"');
         $juegosduo=DB::select('SELECT nombre FROM videojuegos where videojuegos.categorias_id like "3"');
+        $fechaspago = DB::select('SELECT DISTINCT fecha FROM pagos');
+        $numerospago = DB::select('SELECT monto FROM pagos');
 
         $id=DB::select('SELECT id FROM videojuegos where videojuegos.categorias_id like "1"');
         $idgrp=DB::select('SELECT id FROM videojuegos where videojuegos.categorias_id like "2"');
         $idduo=DB::select('SELECT id FROM videojuegos where videojuegos.categorias_id like "3"');
         
-        
-        for($i=0; $i < sizeof($juegos);$i++){
-        
-            $data['label'][] = $juegos[$i]->nombre;
+        $individual= Inscripcionidv::all()->count();
+        $grupal= Inscripciongrp::all()->count();
+        $inscripcionestotales = round($individual + $grupal);
 
+        for($i=0; $i < sizeof($juegos);$i++){
+            $data['label'][] = $juegos[$i]->nombre;
             $data['data'][] = Inscripcionidv::all()->where('videojuegos_id', $id[$i]->id)->count(); 
         }
 
         
         for($i=0; $i < sizeof($juegosgrp);$i++){
-            
             $data['labelg'][] = $juegosgrp[$i]->nombre;
             $data['datag'][] = Inscripciongrp::all()->where('videojuegos_id',$idgrp[$i]->id)->count();
         }
 
         for($i=0; $i < sizeof($juegosduo);$i++){
-            
             $data['labeld'][] = $juegosduo[$i]->nombre;
             $data['datad'][] = Inscripciongrp::all()->where('videojuegos_id',$idduo[$i]->id)->count();
         }
 
-        $data['data'] = json_encode($data);
+        for($i=0; $i < sizeof($fechaspago);$i++){
+            $data['labelf'][] = $fechaspago[$i]->fecha;
+            $data['dataf'][] = $numerospago[$i]->monto;
+        }
+
+        for($i=0; $i < sizeof($fechaspago);$i++){
+            $data['labeli'][] = $fechaspago[$i]->fecha;
+            $data['datai'][] = $inscripcionestotales;
+        }
+        $data['data'] = json_encode($data); 
         
         return $data;
     }
