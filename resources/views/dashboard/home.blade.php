@@ -101,12 +101,15 @@
         <div class="col-xl-6 col-xxl-7">
             <div class="card flex-fill w-100">
                 <div class="card-header">
-
-                    <h5 class="card-title mb-0">Recent Movement</h5>
+                    <h5 class="card-title mb-0">Totales de inscripciones por tipo</h5>
                 </div>
                 <div class="card-body py-3">
-                    <div class="chart chart-sm">
-                        <canvas id="chartjs-dashboard-line"></canvas>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="chart chart-sm" style="position: relative; height:250px; width:400px">
+                                <canvas id="Inscripcionespie"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,7 +123,7 @@
                     <h5 class="card-title mb-0">Juegos individuales más populares</h5>
                 </div>
                 <div class="card-body d-flex">
-                    <div class="align-self-center w-100">
+                    <div class="align-self-center">
                         <div class="py-3" style="position: relative; height:40vh; width:80vw">
                             <canvas id="juegosidv"></canvas>
                         </div>
@@ -134,7 +137,7 @@
                     <h5 class="card-title mb-0">Juegos grupales más populares</h5>
                 </div>
                 <div class="card-body d-flex">
-                    <div class="align-self-center w-100">
+                    <div class="align-self-center">
                         <div class="py-3" style="position: relative; height:40vh; width:80vw">
                             <canvas id="juegosgrp"></canvas>
                         </div>
@@ -150,7 +153,7 @@
                     <h5 class="card-title mb-0">Juegos duales más populares</h5>
                 </div>
                 <div class="card-body d-flex">
-                    <div class="align-self-center w-100">
+                    <div class="align-self-center">
                         <div class="py-3" style="position: relative; height:40vh; width:80vw">
 							<canvas id="juegosduo"></canvas>
 						</div>
@@ -339,5 +342,27 @@
 			}
 		}
 	});
+    /////////////////////////////
+    var pieChartCanvas = $('#Inscripcionespie').get(0).getContext('2d')
+	var pieData = {
+		labels: [
+			'Incripcciones Individuales',
+			'Inscripcciones Grupales',
+		],
+		datasets: [{
+			data: [<?php echo $totales['total_inscripcionIndi'] ?>, <?php echo $totales['total_inscripcionGru'] ?>],
+			backgroundColor: ['#BAE8F3', '#FDED7C']
+		}]
+	}
+	var pieOptions = {
+		legend: {
+			display: true
+		}
+	}
+    var pieChart = new Chart(pieChartCanvas, {
+		type: 'doughnut',
+		data: pieData,
+		options: pieOptions
+	})
 </script>
 @stop
