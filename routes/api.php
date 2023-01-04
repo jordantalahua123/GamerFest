@@ -9,6 +9,9 @@ use App\Http\Controllers\InscripcionGrupalController;
 use App\Http\Controllers\AulaController;
 use App\Http\Controllers\EquiposController;
 use App\Http\Controllers\VideoJuegosController;
+use App\Http\Controllers\PagosController;
+use App\Http\Controllers\InscripcionIndController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,3 +34,6 @@ Route::get('/inscripcionGrupalApi',[InscripcionGrupalController::class, 'index']
 Route::get('/aulasApi', [AulaController::class, 'index']);
 Route::get('/equipoApi', [EquiposController::class, 'index']);
 Route::get('/juegosApi',[VideoJuegosController::class, 'index']);
+Route::get('/pagoApi',[PagosController::class, 'index']);  
+Route::get('/inscripcionindApi',[InscripcionIndController::class, 'index']);  
+
