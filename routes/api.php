@@ -4,8 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\HorarioController;
-use App\Http\Controllers\JugadoresController;
-use App\Http\Controllers\InscripcionGrupalController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,5 +22,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/categoriaApi',[CategoriaController::class, 'index']);  
 Route::get('/horarioApi',[HorarioController::class, 'index']);  
-Route::get('/jugadoresApi',[JugadoresController::class, 'index']);
-Route::get('/inscripcionGrupalApi',[InscripcionGrupalController::class, 'index']);
