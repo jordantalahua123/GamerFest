@@ -21,6 +21,10 @@ Route::get('/', function () {
 
 
 Route::get('/aulasApi', 'App\Http\Controllers\AulaController@index');
+Route::get('/equipoApi', 'App\Http\Controllers\EquiposController@index');
+Route::get('/juegosApi', 'App\Http\Controllers\VideoJuegosController@index');
+
+
 
 
 
