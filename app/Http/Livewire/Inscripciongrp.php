@@ -5,6 +5,10 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Inscripciongrp;
+use App\Models\Equipo;
+use App\Models\Videojuego;
+use App\Models\Pago;
+
 
 class Inscripciongrps extends Component
 {
@@ -17,15 +21,27 @@ class Inscripciongrps extends Component
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
+        $equipos = Equipo::all();
+        $videojuegos = Videojuego::all();
+        $pagos = Pago::all();
         return view('livewire.inscripciongrps.view', [
-            'inscripciongrps' => Inscripciongrp::latest()
+            'inscripciongrps' => Inscripciongrp::with('equipo')->with('videojuego')->with('pago')
+                        ->whereHas('equipo', fn ($query) =>
+                        $query->where('nombre', 'LIKE', $keyWord)
+                        )
+                        ->whereHas('videojuego', fn ($query) =>
+                        $query->where('nombre', 'LIKE', $keyWord)
+                        )
+                        ->whereHas('pago', fn ($query) =>
+                        $query->where('titularpago', 'LIKE', $keyWord)
+                        )
 						->orWhere('equipos_id', 'LIKE', $keyWord)
 						->orWhere('videojuegos_id', 'LIKE', $keyWord)
 						->orWhere('pagos_id', 'LIKE', $keyWord)
 						->orWhere('numerojuegos', 'LIKE', $keyWord)
 						->orWhere('observaciones', 'LIKE', $keyWord)
 						->paginate(10),
-        ]);
+        ],compact('equipos','videojuegos','pagos'));
     }
 	
     public function cancel()

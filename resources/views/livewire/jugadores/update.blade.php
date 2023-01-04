@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="updateModalLabel">Update Jugadore</h5>
+                <h5 class="modal-title" id="updateModalLabel">Actualizar jugadores</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span wire:click.prevent="cancel()" aria-hidden="true">×</span>
                 </button>
@@ -13,7 +13,12 @@
 					<input type="hidden" wire:model="selected_id">
             <div class="form-group">
                 <label for="equipos_id"></label>
-                <input wire:model="equipos_id" type="text" class="form-control" id="equipos_id" placeholder="Equipos Id">@error('equipos_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select wire:model="equipos_id" type="text" class="form-control" id="equipos_id" placeholder="Equipo">@error('equipos_id') <span class="error text-danger">{{ $message }}</span> @enderror
+                <option>Seleccione</option>
+                    @foreach($equipos as $equipo)
+                    <option value="{{$equipo->id}}">{{$equipo->nombre}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="nombre"></label>

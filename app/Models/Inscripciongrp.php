@@ -11,7 +11,7 @@ class Inscripciongrp extends Model
 	
     public $timestamps = true;
 
-    protected $table = 'inscripciongrps';
+    protected $table = 'inscripciongrp';
 
     protected $fillable = ['equipos_id','videojuegos_id','pagos_id','numerojuegos','observaciones'];
 	

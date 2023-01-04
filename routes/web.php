@@ -14,8 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
+
+
+
+
+Route::get('/aulasApi', 'App\Http\Controllers\AulaController@index');
+Route::get('/equipoApi', 'App\Http\Controllers\EquiposController@index');
+Route::get('/juegosApi', 'App\Http\Controllers\VideoJuegosController@index');
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -26,6 +37,10 @@ Route::middleware([
         return view('dash.index');
     })->name('dash');
 });
+
+Route::get('/dashboard', 
+	[App\Http\Controllers\DashboardController::class, 'index']
+	)->name('dashboard');
 
 //Route Hooks - Do not delete//
 	Route::view('jugadores', 'livewire.jugadores.index')->middleware('auth');

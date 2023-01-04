@@ -5,7 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Inscripcionidv;
-
+use App\Models\Jugadore;
+use App\Models\Videojuego;
+use App\Models\Pago;
 class Inscripcionidvs extends Component
 {
     use WithPagination;
@@ -17,15 +19,27 @@ class Inscripcionidvs extends Component
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
+        $jugadores = Jugadore::all();
+        $videojuegos = Videojuego::all();
+        $pagos = Pago::all();
         return view('livewire.inscripcionidvs.view', [
-            'inscripcionidvs' => Inscripcionidv::latest()
+            'inscripcionidvs' => Inscripcionidv::with('jugadore')->with('videojuego')->with('pago')
+                        ->whereHas('jugadore', fn ($query) =>
+                        $query->where('nombre', 'LIKE', $keyWord)
+                        )
+                        ->whereHas('videojuego', fn ($query) =>
+                        $query->where('nombre', 'LIKE', $keyWord)
+                        )
+                        ->whereHas('pago', fn ($query) =>
+                        $query->where('titularpago', 'LIKE', $keyWord)
+                        )
 						->orWhere('jugadores_id', 'LIKE', $keyWord)
 						->orWhere('videojuegos_id', 'LIKE', $keyWord)
 						->orWhere('pagos_id', 'LIKE', $keyWord)
 						->orWhere('numerojuegos', 'LIKE', $keyWord)
 						->orWhere('observaciones', 'LIKE', $keyWord)
 						->paginate(10),
-        ]);
+        ],compact('jugadores','videojuegos','pagos'));
     }
 	
     public function cancel()
