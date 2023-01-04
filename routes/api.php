@@ -11,6 +11,7 @@ use App\Http\Controllers\EquiposController;
 use App\Http\Controllers\VideoJuegosController;
 use App\Http\Controllers\PagosController;
 use App\Http\Controllers\InscripcionIndController;
+use App\Http\Controllers\FechaPagosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,5 @@ Route::get('/equipoApi', [EquiposController::class, 'index']);
 Route::get('/juegosApi',[VideoJuegosController::class, 'index']);
 Route::get('/pagoApi',[PagosController::class, 'index']);  
 Route::get('/inscripcionindApi',[InscripcionIndController::class, 'index']);  
+Route::get('/fechaspagoApi',[FechaPagosController::class, 'index']);  
 
