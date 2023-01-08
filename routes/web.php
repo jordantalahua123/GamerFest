@@ -50,3 +50,7 @@ Route::get('/dashboard',
 	Route::view('videojuegos', 'livewire.videojuegos.index')->middleware('auth');
 	Route::view('categoriajuegos', 'livewire.categoriajuegos.index')->middleware('auth');
 	Route::view('aulas', 'livewire.aulas.index')->middleware('auth');
+	Route::view('reporte-inscripcionidv','livewire.reporte-inscripcionidv.index')->middleware('auth');
+	Route::view('reporte-categoria','livewire.reporte-categoria.index')->middleware('auth');
+	Route::get('/pdf-cat',[App\Http\Livewire\ReporteCategoria::class,'pdf'])->name('descargarPDF-Cat');
+	//Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Soc');

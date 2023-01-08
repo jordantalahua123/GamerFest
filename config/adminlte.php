@@ -150,7 +150,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
@@ -311,47 +311,79 @@ return [
         [
             'text' => 'Aulas',
             'url'  => 'http://127.0.0.1:8000/aulas',
-            'icon' => 'fas fa-fw fa-hospital-alt',
+            'icon' => 'fas fa-fw fa-hospital-alt mr-1',
         ],
         [
             'text' => 'Horarios',
             'url'  => 'http://127.0.0.1:8000/horarios',
-            'icon' => 'fas fa-fw fa-calendar',
+            'icon' => 'fas fa-fw fa-calendar mr-1',
         ],
         [
             'text' => 'Categorias',
             'url'  => 'http://127.0.0.1:8000/categoriajuegos',
-            'icon' => 'fas fa-fw fa-tags',
+            'icon' => 'fas fa-fw fa-tags mr-1',
         ],
         [
             'text' => 'Videojuegos',
             'url'  => 'http://127.0.0.1:8000/videojuegos',
-            'icon' => 'fas fa-fw fa-dice',
+            'icon' => 'fas fa-fw fa-dice mr-1',
         ],
         [
             'text' => 'Equipos',
             'url'  => 'http://127.0.0.1:8000/equipos',
-            'icon' => 'fas fa-fw fa-people-arrows',
+            'icon' => 'fas fa-fw fa-people-arrows mr-1',
         ],
         [
             'text' => 'Jugadores',
             'url'  => 'http://127.0.0.1:8000/jugadores',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-user mr-1',
         ],
         [
             'text' => 'Pagos',
             'url'  => 'http://127.0.0.1:8000/pagos',
-            'icon' => 'fas fa-fw fa-shopping-cart',
+            'icon' => 'fas fa-fw fa-shopping-cart mr-1',
         ],
         [
             'text' => 'Inscripción grupal',
             'url'  => 'http://127.0.0.1:8000/inscripciongrp',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-users mr-1',
         ],
         [
             'text' => 'Inscripción individual',
             'url'  => 'http://127.0.0.1:8000/inscripcionidv',
-            'icon' => 'fas fa-fw fa-user-plus',
+            'icon' => 'fas fa-fw fa-user-plus mr-1',
+        ],
+        ['header' => 'Reportes'],
+        [
+            'text'       => 'Generar Reporte',
+            'icon'       => 'fas fa-file-pdf mr-1',
+            'submenu' => [
+                [
+                    'text' => 'Reporte de inscripciones inv',
+                    'icon' => 'fas fa-scroll',
+                    'url'  => '/reporte-inscripcionidv',
+                ],
+                [
+                    'text' => 'Reporte de inscripciones grp',
+                    'url'  => '/',
+                    'icon' => '',
+                ],
+                [
+                    'text' => 'Juegos por categoria',
+                    'url'  => '/reporte-categoria',
+                    'icon' => 'fas fa-sitemap',
+                ],
+                [
+                    'text' => 'Cuarto reporte',
+                    'url'  => '/',
+                    'icon' => ''
+                ],
+                [
+                    'text' => 'Quinto reporte',
+                    'url'  => '/',
+                    'icon' => ''
+                ]
+            ]  
         ],
     ],
 
