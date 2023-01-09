@@ -6,7 +6,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Videojuego;
 use App\Models\Categoriajuego;
-
+use PDF;
 class Videojuegos extends Component
 {
     use WithPagination;
@@ -116,4 +116,10 @@ class Videojuegos extends Component
             $record->delete();
         }
     }
+    public function viewPDF()
+    {
+        $videojuegos = Videojuego::all();
+        $pdf = PDF::loadView('livewire.pdf.videojuegos',compact('videojuegos'))->setPaper('a4');
+        return $pdf->stream();
+    } 
 }

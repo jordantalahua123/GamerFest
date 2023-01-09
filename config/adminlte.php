@@ -374,16 +374,16 @@ return [
                     'icon' => 'fas fa-sitemap',
                 ],
                 [
-                    'text' => 'Cuarto reporte',
-                    'url'  => '/',
-                    'icon' => ''
+                    'text' => 'Reporte horarios',
+                    'url'  => 'http://127.0.0.1:8000/horarios',
+                    'icon' => 'fas fa-fw fa-calendar mr-2'
                 ],
                 [
-                    'text' => 'Quinto reporte',
-                    'url'  => '/',
-                    'icon' => ''
+                    'text' => 'Reporte videojuegos',
+                    'url'  => 'http://127.0.0.1:8000/videojuegos',
+                    'icon' => 'fas fa-fw fa-dice mr-1'
                 ]
-            ]  
+            ]   
         ],
     ],
 

@@ -54,4 +54,12 @@ Route::get('/dashboard',
 	Route::view('reporte-categoria','livewire.reporte-categoria.index')->middleware('auth');
 	Route::get('/pdf-cat',[App\Http\Livewire\ReporteCategoria::class,'pdf'])->name('descargarPDF-Cat');
 	Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Idv');
+
+
+
+
+
+
+	Route::get('/pdf-horario',[\App\Http\Livewire\Horarios::class,'viewPDF'])->name('view-pdf');
+	Route::get('/pdf-videojuego',[\App\Http\Livewire\Videojuegos::class,'viewPDF'])->name('view-pdf2');
 	//Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Soc');

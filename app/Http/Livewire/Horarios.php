@@ -7,7 +7,7 @@ use Livewire\WithPagination;
 use App\Models\Horario;
 use App\Models\Videojuego;
 use App\Models\Aula;
-
+use PDF;
 class Horarios extends Component
 {
     use WithPagination;
@@ -130,4 +130,10 @@ class Horarios extends Component
             $record->delete();
         }
     }
-}
+    public function viewPDF()
+    {
+        $horarios = Horario::all();
+        $pdf = PDF::loadView('livewire.pdf.horarios',compact('horarios'))->setPaper('a4');
+        return $pdf->stream();
+    }   
+}           

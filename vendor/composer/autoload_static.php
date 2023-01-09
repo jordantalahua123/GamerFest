@@ -640,6 +640,7 @@ class ComposerStaticInitd428a08ee7211f9244b5321498f8f8d4
         'App\\Http\\Livewire\\Inscripcionidvs' => __DIR__ . '/../..' . '/app/Http/Livewire/Inscripcionidvs.php',
         'App\\Http\\Livewire\\Jugadores' => __DIR__ . '/../..' . '/app/Http/Livewire/Jugadores.php',
         'App\\Http\\Livewire\\Pagos' => __DIR__ . '/../..' . '/app/Http/Livewire/Pagos.php',
+        'App\\Http\\Livewire\\ReporteCategoria' => __DIR__ . '/../..' . '/app/Http/Livewire/ReporteCategoria.php',
         'App\\Http\\Livewire\\ReporteInscripcionidv' => __DIR__ . '/../..' . '/app/Http/Livewire/ReporteInscripcionidv.php',
         'App\\Http\\Livewire\\Videojuegos' => __DIR__ . '/../..' . '/app/Http/Livewire/Videojuegos.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
