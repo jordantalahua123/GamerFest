@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Inscripcionidv;
-use Barryvdh\DomPDF\Facade as PDF;
+use PDF;
 
 class ReporteInscripcionidv extends Component
 {
@@ -42,6 +42,21 @@ class ReporteInscripcionidv extends Component
         $this->ipm=$ins_per_month;
 
     }
+    public function pdf()
+    {
+        $meses=collect(
+            [
+                '01'=>'Enero','02'=>'Febrero','03'=>'Marzo','04'=>'Abril','05'=>'Mayo',
+                '06'=>'Junio','07'=>'Julio','08'=>'Agosto','09'=>'Septiembre','10'=>'Octubre','11'=>'Noviembre','12'=>'Diciembre',
+            ]
+        );
+        $anio = $_GET['anio'];
+        $lista=$this->getInscripcionidv($anio);
+        $ipm = $this->ipm; 
+        $pdf = PDF::loadView('livewire.reporte-inscripcionidv.pdf',compact('ipm','anio','meses'));
+        return $pdf->stream('Reporte-inscripciones-individuales'.date('Y-m-d').'.pdf');
+    }
+
     public function restData(){
         $this->num_busq = 0;
     }

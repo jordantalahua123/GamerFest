@@ -53,4 +53,5 @@ Route::get('/dashboard',
 	Route::view('reporte-inscripcionidv','livewire.reporte-inscripcionidv.index')->middleware('auth');
 	Route::view('reporte-categoria','livewire.reporte-categoria.index')->middleware('auth');
 	Route::get('/pdf-cat',[App\Http\Livewire\ReporteCategoria::class,'pdf'])->name('descargarPDF-Cat');
+	Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Idv');
 	//Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Soc');

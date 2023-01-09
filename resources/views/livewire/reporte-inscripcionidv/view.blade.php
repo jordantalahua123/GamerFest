@@ -22,12 +22,19 @@
             <button wire:click.prevent="getInscripcionidv({{ $anio }})" class="btn btn-info"
                 wire:click="renderData()">Generar</button>
         </div>
+        <div class="col">
+            <a href="{{ route('descargarPDF-Idv',['anio' => $anio])}}" target="_blank" class="btn btn-success"
+                style="float: right;">
+                <span>Exportar</span>
+                <i class="fas fa-download p-1"></i>
+            </a>
+        </div>
     </div>
     <div class="row justify-content-center pt-5">
         <div class="col-6">
-            <table class="table table-bordered">
+            <table class="table table-hover table-success">
                 <thead>
-                    <tr class="bg-danger">
+                    <tr class="">
                         <th scope="col" class="text-center">Mes</th>
                         <th scope="col" class="text-center">Numero Inscritos</th>
                     </tr>
@@ -37,7 +44,7 @@
                     <tr>
                         <td class="text-center">{{ $nombre }}</td>
                         @if(isset($ipm))
-                        <td>{{ $ipm[$loop->iteration - 1] }}</td>
+                        <td class="text-center">{{ $ipm[$loop->iteration - 1] }}</td>
                         @endif
                     </tr>
                     @endforeach
