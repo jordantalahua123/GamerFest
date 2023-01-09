@@ -397,8 +397,8 @@ return [
                 ],
                 [
                     'text' => 'Reporte de inscripciones grp',
-                    'url'  => '/',
-                    'icon' => '',
+                    'url'  => '/reporte-inscripciongrp',
+                    'icon' => 'fas fa-users-cog',
                 ],
                 [
                     'text' => 'Juegos por categoria',
