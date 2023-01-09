@@ -35,6 +35,7 @@ return array(
     'App\\Http\\Livewire\\Inscripcionidvs' => $baseDir . '/app/Http/Livewire/Inscripcionidvs.php',
     'App\\Http\\Livewire\\Jugadores' => $baseDir . '/app/Http/Livewire/Jugadores.php',
     'App\\Http\\Livewire\\Pagos' => $baseDir . '/app/Http/Livewire/Pagos.php',
+    'App\\Http\\Livewire\\ReporteCategoria' => $baseDir . '/app/Http/Livewire/ReporteCategoria.php',
     'App\\Http\\Livewire\\ReporteInscripcionidv' => $baseDir . '/app/Http/Livewire/ReporteInscripcionidv.php',
     'App\\Http\\Livewire\\Videojuegos' => $baseDir . '/app/Http/Livewire/Videojuegos.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
