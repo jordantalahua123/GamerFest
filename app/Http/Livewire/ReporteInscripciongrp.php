@@ -8,7 +8,7 @@ use PDF;
 
 class ReporteInscripciongrp extends Component
 {
-    public $anio,$ipm,$num_busq;
+    public $anio,$ipm;
 
     public function render()
     {
@@ -55,13 +55,5 @@ class ReporteInscripciongrp extends Component
         $ipm = $this->ipm; 
         $pdf = PDF::loadView('livewire.reporte-inscripciongrp.pdf',compact('ipm','anio','meses'));
         return $pdf->stream('Reporte-inscripciones-grupales'.date('Y-m-d').'.pdf');
-    }
-
-    public function restData(){
-        $this->num_busq = 0;
-    }
-
-    public function renderData(){
-        $this->num_busq = 1;
     }
 }

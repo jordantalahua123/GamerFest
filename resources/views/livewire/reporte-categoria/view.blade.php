@@ -15,13 +15,12 @@
             </select>
         </div>
         <div class="col-1">
-            <button wire:click.prevent="ListarJuegos({{$categoria}})" class="btn btn-info">Generar</button>
+            <button wire:click.prevent="ListarJuegos({{$categoria}})" class="btn btn-danger">Buscar</button>
         </div>
         <div class="col">
             <a href="{{ route('descargarPDF-Cat',['categoriajuegos' => $categoria])}}" target="_blank" class="btn btn-success"
                 style="float: right;">
-                <span>Exportar</span>
-                <i class="fas fa-download p-1"></i>
+                <span>Crear PDF</span>
             </a>
         </div>
     </div>
