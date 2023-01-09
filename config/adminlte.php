@@ -15,7 +15,7 @@ return [
     */
 
     'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title_prefix' => 'Gamerfest |',
     'title_postfix' => '',
 
     /*
@@ -109,11 +109,11 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'img/logo-sinfondo2.png',
-            'alt' => 'AdminLTE Preloader Image',
+            'path' => 'img/logo.jpg',
+            'alt' => 'Prelogo',
             'effect' => 'animation__shake',
-            'width' => 70,
-            'height' => 70,
+            'width' => 120,
+            'height' => 120,
         ],
     ],
 
@@ -194,7 +194,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -307,51 +307,83 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Principal'],
         [
-            'text' => 'Aulas',
-            'url'  => 'http://127.0.0.1:8000/aulas',
-            'icon' => 'fas fa-fw fa-hospital-alt mr-1',
+            'text' => 'Dashboard',
+            'url'  => 'http://127.0.0.1:8000/dashboard',
+            'icon' => 'fas fa-fw fa-chart-line',
+            'classes'  => 'text-red text-bold',
+            'icon_color' => 'red'
+        ],
+        ['header' => 'General'],
+        [
+            'text' => 'Gestión',
+            'icon' => 'fas fa-fw fa-tachometer-alt',
+            'icon_color' => 'light',
+            'classes'  => 'text-light text-bold',
+            'submenu' => [
+                [
+                    'text' => 'Aulas',
+                    'url'  => 'http://127.0.0.1:8000/aulas',
+                    'icon' => 'fas fa-fw fa-hospital-alt',
+                ],
+                [
+                    'text' => 'Horarios',
+                    'url'  => 'http://127.0.0.1:8000/horarios',
+                    'icon' => 'fas fa-fw fa-calendar',
+                ],
+                [
+                    'text' => 'Categorias',
+                    'url'  => 'http://127.0.0.1:8000/categoriajuegos',
+                    'icon' => 'fas fa-fw fa-tags',
+                ],
+                [
+                    'text' => 'Videojuegos',
+                    'url'  => 'http://127.0.0.1:8000/videojuegos',
+                    'icon' => 'fas fa-fw fa-dice',
+                ]   
+            ]
         ],
         [
-            'text' => 'Horarios',
-            'url'  => 'http://127.0.0.1:8000/horarios',
-            'icon' => 'fas fa-fw fa-calendar mr-1',
+            'text' => 'Usuarios',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'icon_color' => 'orange',
+            'classes'  => 'text-orange text-bold',
+            'submenu' => [
+                [
+                    'text' => 'Equipos',
+                    'url'  => 'http://127.0.0.1:8000/equipos',
+                    'icon' => 'fas fa-fw fa-people-arrows',
+                ],
+                [
+                    'text' => 'Jugadores',
+                    'url'  => 'http://127.0.0.1:8000/jugadores',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+            ]
         ],
         [
-            'text' => 'Categorias',
-            'url'  => 'http://127.0.0.1:8000/categoriajuegos',
-            'icon' => 'fas fa-fw fa-tags mr-1',
-        ],
-        [
-            'text' => 'Videojuegos',
-            'url'  => 'http://127.0.0.1:8000/videojuegos',
-            'icon' => 'fas fa-fw fa-dice mr-1',
-        ],
-        [
-            'text' => 'Equipos',
-            'url'  => 'http://127.0.0.1:8000/equipos',
-            'icon' => 'fas fa-fw fa-people-arrows mr-1',
-        ],
-        [
-            'text' => 'Jugadores',
-            'url'  => 'http://127.0.0.1:8000/jugadores',
-            'icon' => 'fas fa-fw fa-user mr-1',
-        ],
-        [
-            'text' => 'Pagos',
-            'url'  => 'http://127.0.0.1:8000/pagos',
-            'icon' => 'fas fa-fw fa-shopping-cart mr-1',
-        ],
-        [
-            'text' => 'Inscripción grupal',
-            'url'  => 'http://127.0.0.1:8000/inscripciongrp',
-            'icon' => 'fas fa-fw fa-users mr-1',
-        ],
-        [
-            'text' => 'Inscripción individual',
-            'url'  => 'http://127.0.0.1:8000/inscripcionidv',
-            'icon' => 'fas fa-fw fa-user-plus mr-1',
+            'text' => 'Inscripciones',
+            'icon' => 'fas fa-fw fa-cash-register',
+            'icon_color' => 'green',
+            'classes'  => 'text-green text-bold',
+            'submenu' => [
+                [
+                    'text' => 'Pagos',
+                    'url'  => 'http://127.0.0.1:8000/pagos',
+                    'icon' => 'fas fa-fw fa-money-bill',
+                ],
+                [
+                    'text' => 'Inscripción grupal',
+                    'url'  => 'http://127.0.0.1:8000/inscripciongrp',
+                    'icon' => 'fas fa-fw fa-users',
+                ],
+                [
+                    'text' => 'Inscripción individual',
+                    'url'  => 'http://127.0.0.1:8000/inscripcionidv',
+                    'icon' => 'fas fa-fw fa-user-plus',
+                ],
+            ]
         ],
         ['header' => 'Reportes'],
         [
@@ -365,8 +397,8 @@ return [
                 ],
                 [
                     'text' => 'Reporte de inscripciones grp',
-                    'url'  => '/',
-                    'icon' => '',
+                    'url'  => '/reporte-inscripciongrp',
+                    'icon' => 'fas fa-users-cog',
                 ],
                 [
                     'text' => 'Juegos por categoria',
