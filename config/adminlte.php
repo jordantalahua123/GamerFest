@@ -252,8 +252,8 @@ return [
     |
     */
 
-    'use_route_url' => false,
-    'dashboard_url' => 'http://127.0.0.1:8000/dashboard',
+    'use_route_url' => true,
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -310,7 +310,7 @@ return [
         ['header' => 'Principal'],
         [
             'text' => 'Dashboard',
-            'url'  => 'http://127.0.0.1:8000/dashboard',
+            'url'  => 'dashboard',
             'icon' => 'fas fa-fw fa-chart-line',
             'classes'  => 'text-red text-bold',
             'icon_color' => 'red'
@@ -324,22 +324,22 @@ return [
             'submenu' => [
                 [
                     'text' => 'Aulas',
-                    'url'  => 'http://127.0.0.1:8000/aulas',
+                    'url'  => 'aulas',
                     'icon' => 'fas fa-fw fa-hospital-alt',
                 ],
                 [
                     'text' => 'Horarios',
-                    'url'  => 'http://127.0.0.1:8000/horarios',
+                    'url'  => 'horarios',
                     'icon' => 'fas fa-fw fa-calendar',
                 ],
                 [
                     'text' => 'Categorias',
-                    'url'  => 'http://127.0.0.1:8000/categoriajuegos',
+                    'url'  => 'categoriajuegos',
                     'icon' => 'fas fa-fw fa-tags',
                 ],
                 [
                     'text' => 'Videojuegos',
-                    'url'  => 'http://127.0.0.1:8000/videojuegos',
+                    'url'  => 'videojuegos',
                     'icon' => 'fas fa-fw fa-dice',
                 ]   
             ]
@@ -352,12 +352,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Equipos',
-                    'url'  => 'http://127.0.0.1:8000/equipos',
+                    'url'  => 'equipos',
                     'icon' => 'fas fa-fw fa-people-arrows',
                 ],
                 [
                     'text' => 'Jugadores',
-                    'url'  => 'http://127.0.0.1:8000/jugadores',
+                    'url'  => 'jugadores',
                     'icon' => 'fas fa-fw fa-user',
                 ],
             ]
@@ -370,17 +370,17 @@ return [
             'submenu' => [
                 [
                     'text' => 'Pagos',
-                    'url'  => 'http://127.0.0.1:8000/pagos',
+                    'url'  => 'pagos',
                     'icon' => 'fas fa-fw fa-money-bill',
                 ],
                 [
                     'text' => 'Inscripción grupal',
-                    'url'  => 'http://127.0.0.1:8000/inscripciongrp',
+                    'url'  => 'inscripciongrp',
                     'icon' => 'fas fa-fw fa-users',
                 ],
                 [
                     'text' => 'Inscripción individual',
-                    'url'  => 'http://127.0.0.1:8000/inscripcionidv',
+                    'url'  => 'inscripcionidv',
                     'icon' => 'fas fa-fw fa-user-plus',
                 ],
             ]
@@ -406,13 +406,13 @@ return [
                     'icon' => 'fas fa-sitemap',
                 ],
                 [
-                    'text' => 'Reporte horarios',
-                    'url'  => 'http://127.0.0.1:8000/horarios',
+                    'text' => 'Reporte pagos',
+                    'url'  => '/reporte-pago',
                     'icon' => 'fas fa-fw fa-calendar mr-2'
                 ],
                 [
-                    'text' => 'Reporte videojuegos',
-                    'url'  => 'http://127.0.0.1:8000/videojuegos',
+                    'text' => 'Reporte jugadores',
+                    'url'  => '/reporte-jugador',
                     'icon' => 'fas fa-fw fa-dice mr-1'
                 ]
             ]   
