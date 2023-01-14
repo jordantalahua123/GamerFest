@@ -12,6 +12,7 @@ use App\Models\Inscripcionidv;
 use App\Models\Videojuego;
 use App\Models\Jugadore;
 use App\Models\Pago;
+use App\Models\Evento;
 
 class DashboardController extends Controller
 {
@@ -35,9 +36,11 @@ class DashboardController extends Controller
 
         $totales = $this->Totales();
         $data = $this->FuncionRecogida();
+        $eventos = $this->getEventos();
 
         return view('dashboard.home',[
             'totales'=>$totales,
+            'eventos'=>$eventos,
         ],$data);
     }
     public function Totales()
@@ -62,6 +65,9 @@ class DashboardController extends Controller
             'total_pagos' => (float) $pagos[0]->suma,
         ];
         return $contar;
+    }
+    public function getEventos(){
+        return Evento::select('Nombre','fecha')->orderBy('fecha')->take(5)->get();
     }
     public function FuncionRecogida(){
     

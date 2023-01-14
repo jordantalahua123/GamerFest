@@ -107,7 +107,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-6">
                             <div class="chart chart-sm" style="position: relative; height:250px; width:400px">
-                                <canvas id="Inscripcionespie"></canvas>
+                                <canvas id="PieChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -177,17 +177,34 @@
                 </div> 
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 pb-5">
             <div class="card flex-fill w-100">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Numero de inscripciones diarias</h5>
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <h5 class="card-title mb-0">Eventos anteriores</h5>
+                        </div>
+                        <div class="col-6">
+                            <a href="eventos" class="btn btn-info">Más detalles</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body d-flex">
-                    <div class="align-self-center w-100">
-                        <div class="py-3" style="position: relative; height:40vh; width:80vw">
-							<canvas id="inscripciones"></canvas>
-						</div>
-                    </div>
+                    <table class="table table-hover">
+							<thead class="thead">
+								<tr>
+									<th>Nombre</th>
+									<th>Fecha</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach ($eventos as $row)
+								<tr>
+									<td>{{ $row->Nombre}}</td>
+									<td>{{ $row->fecha}}</td>
+									@endforeach
+							</tbody>
+					</table>
                 </div> 
             </div>
         </div>
@@ -321,29 +338,8 @@
 		}
 	});
     /////////////////////////////
-    const inscripciones = JSON.parse(`<?php echo $data; ?>`);
-    const inscripcionesChartCanvas = document.getElementById('inscripciones').getContext('2d');
-	const inscripcionesChart = new Chart(inscripcionesChartCanvas, {
-		type: 'line',
-		data: {
-			labels: inscripciones.labeli,
-			datasets: [{
-				data: inscripciones.datai,
-				backgroundColor: 'rgba(252, 211, 112)',
-				borderColor: 'green',
-				borderWidth: 3
-			}]  
-		},
-		options: {
-			plugins: {
-				legend: {
-					display: false
-				}
-			}
-		}
-	});
     /////////////////////////////
-    var pieChartCanvas = $('#Inscripcionespie').get(0).getContext('2d')
+    var pieChartCanvas = $('#PieChart').get(0).getContext('2d')
 	var pieData = {
 		labels: [
 			'Incripcciones Individuales',

@@ -341,6 +341,11 @@ return [
                     'text' => 'Videojuegos',
                     'url'  => 'videojuegos',
                     'icon' => 'fas fa-fw fa-dice',
+                ],
+                [
+                    'text' => 'Eventos',
+                    'url'  => 'eventos',
+                    'icon' => 'fas fa-fw fa-calendar-alt',
                 ]   
             ]
         ],
