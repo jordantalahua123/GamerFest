@@ -1,13 +1,13 @@
-@section('title', __('Categoria'))
-<div class="container-fluid p-5">
+@section('title', __('Jugadores'))
+<div class="container-fluid p-5">   
     <div class="row justify-content-center">
         <div class="col-6">
-            <h2 class="text-center"><b>Reporte Juegos por Categoria</b></h2>
+            <h2 class="text-center"><b>Reporte de jugadores</b></h2>
         </div>
     </div>
     <div class="row justify-content-end">
         <div class="col">
-            <a href="{{ route('descargarPDF-Cat')}}" target="_blank" class="btn btn-success"
+            <a href="{{ route('descargarPDF-Jug')}}" target="_blank" class="btn btn-success"
                 style="float: right;">
                 <span>Crear PDF</span>
             </a>
@@ -18,16 +18,16 @@
             <table class="table table-hover table-success">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Juego</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Equipo inscrito</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($videojuegos as $row) <tr>
-                        <td>{{$row->id}}</td>
-                        <td>{{$row->Categoria}}</td>
+                    @foreach($jugadores as $row) <tr>
+                        <td>{{$row->Id}}</td>
                         <td>{{$row->nombre}}</td>
+                        <td>{{$row->Equipo}}</td>
                         @endforeach
                         </tr>
                         <tr class="table-secondary">
@@ -36,7 +36,3 @@
         </div>
     </div>
 </div>
-
-@section('js')
-<script></script>
-@stop

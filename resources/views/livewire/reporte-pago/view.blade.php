@@ -1,13 +1,13 @@
-@section('title', __('Categoria'))
-<div class="container-fluid p-5">
+@section('title', __('Pagos'))
+<div class="container-fluid p-5">   
     <div class="row justify-content-center">
         <div class="col-6">
-            <h2 class="text-center"><b>Reporte Juegos por Categoria</b></h2>
+            <h2 class="text-center"><b>Reporte de pagos en el sistema</b></h2>
         </div>
     </div>
     <div class="row justify-content-end">
         <div class="col">
-            <a href="{{ route('descargarPDF-Cat')}}" target="_blank" class="btn btn-success"
+            <a href="{{ route('descargarPDF-Pag')}}" target="_blank" class="btn btn-success"
                 style="float: right;">
                 <span>Crear PDF</span>
             </a>
@@ -19,15 +19,15 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Juego</th>
+                        <th scope="col">Monto pagado</th>
+                        <th scope="col">Fecha del pago</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($videojuegos as $row) <tr>
+                    @foreach($pagos as $row) <tr>
                         <td>{{$row->id}}</td>
-                        <td>{{$row->Categoria}}</td>
-                        <td>{{$row->nombre}}</td>
+                        <td>{{$row->monto}}</td>
+                        <td>{{$row->fecha}}</td>
                         @endforeach
                         </tr>
                         <tr class="table-secondary">
@@ -36,7 +36,3 @@
         </div>
     </div>
 </div>
-
-@section('js')
-<script></script>
-@stop

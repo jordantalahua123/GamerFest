@@ -54,14 +54,11 @@ Route::get('/dashboard',
 	Route::view('reporte-categoria','livewire.reporte-categoria.index')->middleware('auth');
 	Route::get('/pdf-cat',[App\Http\Livewire\ReporteCategoria::class,'pdf'])->name('descargarPDF-Cat');
 	Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Idv');
-
-
-
-
-
-
 	Route::get('/pdf-horario',[\App\Http\Livewire\Horarios::class,'viewPDF'])->name('view-pdf');
 	Route::get('/pdf-videojuego',[\App\Http\Livewire\Videojuegos::class,'viewPDF'])->name('view-pdf2');
 	Route::view('reporte-inscripciongrp','livewire.reporte-inscripciongrp.index')->middleware('auth');
 	Route::get('/pdf-grp',[App\Http\Livewire\ReporteInscripciongrp::class,'pdf'])->name('descargarPDF-Grp');
-	//Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Soc');
+	Route::view('reporte-pago','livewire.reporte-pago.index')->middleware('auth');
+	Route::get('/pdf-pag',[App\Http\Livewire\ReportePago::class,'pdf'])->name('descargarPDF-Pag');
+	Route::view('reporte-jugador','livewire.reporte-jugador.index')->middleware('auth');
+	Route::get('/pdf-jug',[App\Http\Livewire\ReporteJugador::class,'pdf'])->name('descargarPDF-Jug');
