@@ -2,24 +2,14 @@
 <div class="container-fluid p-5">   
     <div class="row justify-content-center">
         <div class="col-6">
-            <h2 class="text-center"><b>Reporte Inscripciones individuales</b></h2>
+            <h2 class="text-center"><b>Reporte Inscripciones individuales en 2023</b></h2>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-3">
-            <select wire:model="anio" name="opcion" id="select" class="form-control">
-                <option value="1">Seleccione una Opcion </option>
-                <?php
-                $year = date('Y');
-                for ($i = 2000; $i < $year + 1; $i++) {
-                    echo '<option>' . $i . '</option>';
-                }
-                
-                ?>
-            </select>
-        </div>
-        <div class="col-1">
-            <button wire:click.prevent="getInscripcionidv({{ $anio }})" class="btn btn-danger">Buscar</button>
+            <?php
+                $anio = '2023';
+            ?>
         </div>
         <div class="col">
             <a href="{{ route('descargarPDF-Idv',['anio' => $anio])}}" target="_blank" class="btn btn-success"

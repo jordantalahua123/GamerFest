@@ -19,8 +19,8 @@ class ReporteInscripcionidv extends Component
             ]
         );
         
-        
-        return view('livewire.reporte-inscripcionidv.view',['meses'=>$meses]);
+        $inscripcionidv = $this->getInscripcionidv('2023');
+        return view('livewire.reporte-inscripcionidv.view',['meses'=>$meses,'anio'=>$inscripcionidv]);
     }
 
     public function getInscripcionidv($anio)

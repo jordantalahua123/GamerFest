@@ -18,9 +18,9 @@ class ReporteInscripciongrp extends Component
                 '06'=>'Junio','07'=>'Julio','08'=>'Agosto','09'=>'Septiembre','10'=>'Octubre','11'=>'Noviembre','12'=>'Diciembre',
             ]
         );
+        $inscripciongrp = $this->getInscripciongrp('2023');
         
-        
-        return view('livewire.reporte-inscripciongrp.view',['meses'=>$meses]);
+        return view('livewire.reporte-inscripciongrp.view',['meses'=>$meses,'anio'=>$inscripciongrp]);
     }
 
     public function getInscripciongrp($anio)
