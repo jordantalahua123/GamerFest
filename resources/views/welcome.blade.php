@@ -268,12 +268,14 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright © 2036 <a href="#">Ultimate Developers</a> Todos los derechos reservados.
-
-                        </p>
+                    <div class="col-lg-12 text-center" >
+                        <font color="white">
+                        <div>Copyright © 2036 <a href="#">Ultimate Developers</a> Todos los derechos reservados.</div>
+                        <div>Desarrollado por Diego Tutin, Jordan Talahua, Joan Velasco, Oscar Tenorio.</div>
+                    </font>
+                    
                     </div>
-                </div>
+                </div>x
             </div>
         </footer>
 
