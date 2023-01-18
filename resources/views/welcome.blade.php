@@ -209,7 +209,7 @@
                                             <h4>Actualmente</h4><span>Disponible</span>
                                         </li>
                                         <li>
-                                            <div class="main-border-button border-no-active"><a
+                                            <div class="main-border-button"><a
                                                     href="https://www.dota2.com/home" target="_blank">Información</a></div>
                                         </li>
                                     </ul>
@@ -253,7 +253,7 @@
                                             <h4>Actualmente</h4><span>Disponible</span>
                                         </li>
                                         <li>
-                                            <div class="main-border-button border-no-active"><a
+                                            <div class="main-border-button"><a
                                                     href="https://blog.counter-strike.net" target="_blank">Información</a></div>
                                         </li>
                                     </ul>
