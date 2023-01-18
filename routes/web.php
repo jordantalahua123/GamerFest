@@ -36,6 +36,8 @@ Route::middleware([
     })->name('dash');
 });
 
+Route::get('/user/profile', [UserProfileController::class, 'show'])->name('profile.show');
+
 Route::get('/dashboard', 
 	[App\Http\Controllers\DashboardController::class, 'index']
 	)->name('dashboard');
@@ -56,7 +58,7 @@ Route::get('/dashboard',
 	Route::get('/pdf-cat',[App\Http\Livewire\ReporteCategoria::class,'pdf'])->name('descargarPDF-Cat');
 	Route::get('/pdf-idv',[App\Http\Livewire\ReporteInscripcionidv::class,'pdf'])->name('descargarPDF-Idv');
 	Route::get('/pdf-horario',[\App\Http\Livewire\Horarios::class,'viewPDF'])->name('view-pdf');
-	Route::get('/pdf-videojuego',[\App\Http\Livewire\Videojuegos::class,'viewPDF'])->name('view-pdf2');
+	Route::get('/pdf-videojuego',[\App\Http\Livewire\Videojuegos::class,'viewPDF'])->name('view-pdf2')->middleware('auth');
 	Route::view('reporte-inscripciongrp','livewire.reporte-inscripciongrp.index')->middleware('auth');
 	Route::get('/pdf-grp',[App\Http\Livewire\ReporteInscripciongrp::class,'pdf'])->name('descargarPDF-Grp');
 	Route::view('reporte-pago','livewire.reporte-pago.index')->middleware('auth');
