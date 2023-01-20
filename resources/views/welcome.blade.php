@@ -37,9 +37,9 @@
                             <!-- ***** Logo Start ***** -->
                             <img src="img/gamerfest.png" alt="GamerFest" style="width:auto; height:120px;margin-right:250px;">
                             <ul class="nav">
-                                <li><a href="/" class="active" style="font-size: 25px;">Inicio</a></li>
-                                <li><a href="http://127.0.0.1:8000/login" style="font-size: 25px;">Login</a></li>
-                                <li><a href="http://127.0.0.1:8000/register" style="font-size: 25px;">Registrarse</a></li>
+                                <li><a href="/" class="active" style="font-size: 20px;">Inicio</a></li>
+                                <li><a href="http://127.0.0.1:8000/login" style="font-size: 20px;">Login</a></li>
+                                <li><a href="http://127.0.0.1:8000/register" style="font-size: 20px;">Registrarse</a></li>
                                 <li><a href="/"></a></li>
                             </ul>
                             <a class='menu-trigger'>
@@ -188,6 +188,8 @@
                             </div>
                         </div>
 
+
+
                         <div class="gaming-library">
                             <div class="col-lg-12">
                                 <div class="heading-section">
@@ -223,6 +225,7 @@
                                             <h4>Fortnite</h4><span>Battle Royal</span>
                                         </li>
                                         <li>
+
                                             <h4>Tipo de juego</h4><span>Enfrentamiento Royale</span>
                                         </li>
                                         <li>
@@ -285,6 +288,7 @@
                     </div>
                     <!--Grid column-->
 
+
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <h5 class="text-uppercase">Reglamento</h5>
@@ -314,6 +318,7 @@
                             Joan Velasco  joanvelasco202@gmail.com
                         </a>
                         <br>
+                        
                         <a>
                             <i class="fas fa-envelope "></i>
                             Diego Tutin   diegotutin3255@gmail.com

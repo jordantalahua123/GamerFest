@@ -2,6 +2,7 @@
 
 return [
 
+
     'full_name'                   => 'সম্পূর্ণ নাম',
     'email'                       => 'ইমেইল',
     'password'                    => 'পাসওয়ার্ড',
@@ -17,6 +18,7 @@ return [
     'login_message'               => 'আপনার সেশন শুরু করতে সাইন ইন করুন',
     'register_message'            => 'মেম্বারশিপ নিবন্ধন করুন',
     'password_reset_message'      => 'পাসওয়ার্ড পুনরায় সেট করুন',
+    
     'reset_password'              => 'পাসওয়ার্ড পুনরায় সেট',
     'send_password_reset_link'    => 'পাসওয়ার্ড রিসেট লিঙ্ক পাঠান',
     'verify_message'              => 'আপনার অ্যাকাউন্টের একটি ভেরিফিকেশন প্রয়োজন',
