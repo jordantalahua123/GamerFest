@@ -36,7 +36,7 @@ Route::middleware([
     })->name('dash');
 });
 
-Route::get('/user/profile', [UserProfileController::class, 'show'])->name('profile.show');
+Route::get('/user/profile', [Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController::class, 'show'])->name('profile.show');
 
 Route::get('/dashboard', 
 	[App\Http\Controllers\DashboardController::class, 'index']
