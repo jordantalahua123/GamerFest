@@ -34962,11 +34962,13 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   font-weight: 300;
   margin-bottom: .9rem;
   text-align: center;
+
 }
 
 .login-logo a,
 .register-logo a {
   color: #495057;
+  background: linear-gradient(to right,#005C98,#505BDA);
 }
 
 .login-page,
@@ -34986,6 +34988,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 .login-box,
 .register-box {
   width: 360px;
+  background: linear-gradient(to right,#005C98,#505BDA);
 }
 
 @media (max-width: 576px) {
@@ -35056,6 +35059,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   border-top-right-radius: 0.25rem;
   color: #777;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background: linear-gradient(to right,#005C98,#505BDA);
 }
 
 .login-box-msg,
