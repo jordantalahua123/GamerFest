@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -8,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>
+    <title type="module">
         @hasSection('title')
             @yield('title') |
         @endif {{ config('app.name', 'Laravel') }}
@@ -54,10 +55,12 @@
                                 <a href="{{ url('/equipos') }}" class="nav-link"><i class="fab fa-laravel text-info"></i>
                                     Equipos</a>
                             </li>
+
                             <li class="nav-item">
                                 <a href="{{ url('/pagos') }}" class="nav-link"><i class="fab fa-laravel text-info"></i>
                                     Pagos</a>
                             </li>
+
                             <li class="nav-item">
                                 <a href="{{ url('/horarios') }}" class="nav-link"><i class="fab fa-laravel text-info"></i>
                                     Horarios</a>
@@ -66,10 +69,12 @@
                                 <a href="{{ url('/videojuegos') }}" class="nav-link"><i
                                         class="fab fa-laravel text-info"></i> Videojuegos</a>
                             </li>
+
                             <li class="nav-item">
                                 <a href="{{ url('/categoriajuegos') }}" class="nav-link"><i
                                         class="fab fa-laravel text-info"></i> Categoriajuegos</a>
                             </li>
+
                             <li class="nav-item">
                                 <a href="{{ url('/aulas') }}" class="nav-link"><i class="fab fa-laravel text-info"></i>
                                     Aulas</a>

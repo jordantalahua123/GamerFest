@@ -2,13 +2,22 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\HorarioController;
+
 use App\Http\Controllers\JugadoresController;
+
 use App\Http\Controllers\InscripcionGrupalController;
+
 use App\Http\Controllers\AulaController;
+
 use App\Http\Controllers\EquiposController;
+
+
 use App\Http\Controllers\VideoJuegosController;
+
+
 use App\Http\Controllers\PagosController;
 use App\Http\Controllers\InscripcionIndController;
 use App\Http\Controllers\FechaPagosController;

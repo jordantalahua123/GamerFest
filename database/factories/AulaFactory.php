@@ -14,9 +14,13 @@ class AulaFactory extends Factory
     {
         return [
 			'Nombre' => $this->faker->name,
+
 			'edificio' => $this->faker->name,
+
 			'direccion' => $this->faker->name,
+
 			'observaciones' => $this->faker->name,
+            
         ];
     }
 }
