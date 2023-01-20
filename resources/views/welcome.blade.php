@@ -37,9 +37,9 @@
                             <!-- ***** Logo Start ***** -->
                             <img src="img/gamerfest.png" alt="GamerFest" style="width:auto; height:120px;margin-right:250px;">
                             <ul class="nav">
-                                <li><a href="/" class="active">Inicio</a></li>
-                                <li><a href="http://127.0.0.1:8000/login">Login</a></li>
-                                <li><a href="http://127.0.0.1:8000/register">Registrarse</a></li>
+                                <li><a href="/" class="active" style="font-size: 25px;">Inicio</a></li>
+                                <li><a href="http://127.0.0.1:8000/login" style="font-size: 25px;">Login</a></li>
+                                <li><a href="http://127.0.0.1:8000/register" style="font-size: 25px;">Registrarse</a></li>
                                 <li><a href="/"></a></li>
                             </ul>
                             <a class='menu-trigger'>
@@ -291,15 +291,15 @@
                         <br>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="pdf/Clash_Royale.pdf" class="text-white" target="_blank">Clash Royale</a>
+                                <a href="pdf/Clash_Royale.pdf" class="text-white" target="_blank" title="Juego para Móviles">Clash Royale</a>
                             </li>
                             <br>
                             <li>
-                                <a href="pdf/Dota2.pdf" class="text-white" target="_blank">Dota 2</a>
+                                <a href="pdf/Dota2.pdf" class="text-white" target="_blank" title="Juego para Computadoras">Dota 2</a>
                             </li>
                             <br>
                             <li>
-                                <a href="pdf/Drabon_ball.pdf" class="text-white" target="_blank">Dragon Ball Z</a>
+                                <a href="pdf/Drabon_ball.pdf" class="text-white" target="_blank" title="Juego de Play Station">Dragon Ball Z</a>
                             </li>
                         </ul>
                     </div>
