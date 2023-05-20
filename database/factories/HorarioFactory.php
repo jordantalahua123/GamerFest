@@ -14,11 +14,17 @@ class HorarioFactory extends Factory
     {
         return [
 			'videojuegos_id' => $this->faker->name,
+
 			'aulas_id' => $this->faker->name,
+
 			'tiempo_inicio' => $this->faker->name,
+
 			'tiempo_fin' => $this->faker->name,
+
 			'fecha' => $this->faker->name,
+
 			'Observaciones' => $this->faker->name,
+            
         ];
     }
 }
