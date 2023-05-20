@@ -38,9 +38,9 @@
                             <!-- ***** Logo Start ***** -->
                             <img src="img/gamerfest.png" alt="GamerFest" style="width:auto; height:120px;margin-right:250px;">
                             <ul class="nav">
-                                <li><a href="/" class="active" style="font-size: 25px;">Inicio</a></li>
-                                <li><a href="http://127.0.0.1:8000/login" style="font-size: 25px;">Login</a></li>
-                                <li><a href="http://127.0.0.1:8000/register" style="font-size: 25px;">Registrarse</a></li>
+                                <li><a href="/" class="active" style="font-size: 20px;">Inicio</a></li>
+                                <li><a href="http://127.0.0.1:8000/login" style="font-size: 20px;">Login</a></li>
+                                <li><a href="http://127.0.0.1:8000/register" style="font-size: 20px;">Registrarse</a></li>
                                 <li style="display: none;"><a href="/"></a></li>
                             </ul>
                             <a class='menu-trigger'></a>
@@ -221,63 +221,22 @@
 
                         <div class="gaming-library">
                             <div class="col-lg-12">
-                                <div class="heading-section">
-                                    <h4><em>Biblioteca</em> de Juegos</h4>
+                                <div class="heading-section" style="text-align:center;">
+                                    <h4 style="font-size: 28px;"><em>Concurso</em> de cosplays </h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="most-popular">
-                            <div class="row" >
-                                <div class="col-3"></div>
-                                <div class="col-6">
-                                    <div class="heading-section" style="text-align:center;">
-                                        <h4 style="font-size: 28px;"><em>Concurso</em> de cosplays </h4>
-                                        
-                                    </div>
+                        <div class="gaming-library">
+                            <div class="col-lg-12">
+                                <div class="heading-section" style="text-align:center;">
+                                    <h4 style="font-size: 28px;"><em>Concurso</em> de videojuegos </h4>
                                 </div>
-                                <div class="item">
-                                    <ul>
-                                        <li><img src="/template/assets/images/fornite.jpg" alt="" class="templatemo-item">
-                                        </li>
-                                        <li>
-                                            <h4>Fortnite</h4><span>Battle Royal</span>
-                                        </li>
-                                        <li>
-                                            <h4>Tipo de juego</h4><span>Enfrentamiento Royale</span>
-                                        </li>
-                                        <li>
-                                            <h4>Jugadores</h4><span>5v5</span>
-                                        </li>
-                                        <li>
-                                            <h4>Actualmente</h4><span>Disponible</span>
-                                        </li>
-                                        <li>
-                                            <div class="main-border-button"><a href="https://www.epicgames.com/fortnite/es-ES/home" 
-                                            target="_blank">Información</a></div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="item last-item">
-                                    <ul>
-                                        <li><img src="/template/assets/images/csgo.jpg" alt="" class="templatemo-item">
-                                        </li>
-                                        <li>
-                                            <h4>CS-GO</h4><span>MOBA</span>
-                                        </li>
-                                        <li>
-                                            <h4>Tipo de juego</h4><span>Shooter primera persona</span>
-                                        </li>
-                                        <li>
-                                            <h4>Jugadores</h4><span>5v5</span>
-                                        </li>
-                                        <li>
-                                            <h4>Actualmente</h4><span>Disponible</span>
-                                        </li>
-                                        <li>
-                                            <div class="main-border-button border-no-active"><a
-                                                    href="https://blog.counter-strike.net" target="_blank">Información</a></div>
-                                        </li>
-                                    </ul>
+                            </div>
+                        </div>
+                        <div class="gaming-library">
+                            <div class="col-lg-12">
+                                <div class="heading-section" style="text-align:center;">
+                                    <h4 style="font-size: 28px;"><em>Sponsors</em> del evento </h4>
                                 </div>
                             </div>
                         </div>
